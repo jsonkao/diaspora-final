@@ -5,11 +5,13 @@
   <if condition="item.value.caption">
     <p class="image-caption-text">
       {{{ item.value.caption }}}
-      <!--
-      <span class="image-credit">
-        Photography by {{ item.value.credit}}
-      </span>
-      -->
     </p>
+  </if>
+  <if condition="item.value.video">
+    <div class="video-container {{ item.value.class }}">
+      <video controls class="video" preload="metadata">
+        <source src="assets/{{ item.value.video }}" />
+      </video>
+    </div>
   </if>
 </div>
