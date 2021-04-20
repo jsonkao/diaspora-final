@@ -5,14 +5,15 @@
 
     <title>{{ headline }}</title>
     <link rel="stylesheet" href="./styles.scss" />
-    <link
-      rel="shortcut icon"
-      href="https://www.columbiaspectator.com/pb/resources/img/CDS_Favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      href="https://cdn.knightlab.com/libs/soundcite/latest/css/player.css"
+      rel="stylesheet"
+      type="text/css"
     />
   </head>
 
@@ -27,8 +28,8 @@
           </case>
           <case n="'graphic'">
             <div class="graphic">
-              <if condition="item.value.asset === 'graphic-name.html'">
-                <include src="graphic-name.html"></include>
+              <if condition="item.value.asset === 'over-and-over.html'">
+                <include src="over-and-over.html"></include>
               </if>
             </div>
           </case>
@@ -52,13 +53,31 @@
           <case n="'subhed'">
             <include src="partials/subhed.html"></include>
           </case>
+          <case n="'video'">
+            <include src="partials/video.html"></include>
+          </case>
           <case n="'image'">
             <include src="partials/image.html"></include>
           </case>
+          <case n="'dual-video'">
+            <include src="partials/dual-video.html"></include>
+          </case>
+          <case n="'dual-faces'">
+            <include src="partials/dual-faces.html"></include>
+          </case>
+          <case n="'blockquote'">
+            <include src="partials/blockquote.html"></include>
+          </case>
+          <case n="'audio'">
+            <include src="partials/audio.html"></include>
+          </case>
           <case n="'graphic'">
             <div class="graphic">
-              <if condition="item.value.asset === 'graphic-name.html'">
-                <include src="graphic-name.html"></include>
+              <if condition="item.value.asset === 'over-and-over.html'">
+                <include src="over-and-over.html"></include>
+              </if>
+              <if condition="item.value.asset === 'google-translate.html'">
+                <include src="google-translate.html"></include>
               </if>
             </div>
           </case>
@@ -69,5 +88,9 @@
     <include src="partials/footer.html"></include>
 
     <script src="./script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.knightlab.com/libs/soundcite/latest/js/soundcite.min.js"
+    ></script>
   </body>
 </html>

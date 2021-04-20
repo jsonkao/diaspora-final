@@ -2,3 +2,164 @@
 
 // Uncomment the following line before publishing a News story
 // @import "styles/news-ellipsis";
+
+.video-container {
+  margin: 30px auto;
+  max-width: 1200px;
+  padding: 50px 0;
+  background-color: #000;
+}
+
+video {
+  max-width: 700px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  display: block;
+}
+
+.video-container.wider {
+  video, .caption {
+    max-width: 990px;
+  }
+}
+
+.dual-video {
+  display: flex;
+  max-width: 1200px;
+  width: calc(100% - 40px);
+  margin: 30px auto;
+  padding: 50px 0;
+  align-items: flex-end;
+  background-color: #000;
+
+  div {
+    flex: 1 1 0px;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  div:first-child {
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+  div:last-child {
+    padding-right: 30px;
+    padding-left: 15px;
+  }
+}
+
+.dual-faces {
+  max-width: 500px;
+  display: flex;
+  width: calc(100% - 40px);
+  margin: 30px auto 6px;
+  justify-content: space-between;
+
+  div {
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+    max-width: 160px;
+  }
+
+  div:nth-child(2) {
+    img:first-child {
+      position: absolute;
+    }
+    img:last-child {
+      position: relative;
+      // animation: fade 2s infinite;
+    }
+  }
+}
+
+.faces-caption {
+  font-style: italic;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.caption {
+  margin: 7px auto -9px;
+  padding-left: 16px;
+  font-style: italic;
+  color: white;
+  max-width: 700px;
+  width: calc(100% - 40px);
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.repeat p {
+  font-size: 27px;
+  font-family: Graphik;
+  background-size: 200% auto;
+  background-color: white;
+  background: linear-gradient(to bottom right, #222, #222, #5d8d5d, #a3d0b5, #b4d6ad);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 300%;
+  animation: flow 3s ease-in-out infinite;
+  text-align: center;
+}
+
+.repeat.爸爸 p {
+  background-color: white;
+  background: linear-gradient(to right, #111, #999, #ddd, #fff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+p.paragraph span.blockquote {
+  display: block;
+  padding-left: 40px;
+}
+
+#google-translate {
+  max-width: 700px;
+  width: calc(100% - 40px);
+  margin: 30px auto;
+  display: block;
+  position: relative;
+
+  img {
+    position: relative;
+    width: 100%;
+    transition-duration: 0.3s;
+  }
+
+  img:not(:last-child) {
+    position: absolute;
+  }
+}
+
+audio {
+  margin: 20px auto;
+  display: block;
+}
+
+video,
+audio {
+  outline: none;
+}
+
+div.image.mobile {
+  max-width: 460px;
+  width: calc(100% - 40px);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

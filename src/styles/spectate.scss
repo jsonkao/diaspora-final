@@ -3,7 +3,7 @@
 $georgia: Georgia, serif;
 $graphik: Graphik, helvetica, arial, sans-serif;
 
-$gbody-width: 600px;
+$gbody-width: 700px;
 $gbody-padding: 20px;
 
 $navbar-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.27);
@@ -15,34 +15,29 @@ $fade-transition-duration: 0.25s;
 
 @font-face {
   font-family: Georgia;
-  src: url('https://spectator-fonts.s3.amazonaws.com/Georgia.ttf')
-    format('truetype');
+  src: url("https://spectator-fonts.s3.amazonaws.com/Calluna-Regular-webfont.ttf") format("truetype");
 }
 
 @font-face {
   font-family: Georgia;
-  src: url('https://spectator-fonts.s3.amazonaws.com/Georgia+Italic.ttf')
-    format('truetype');
+  src: url("https://spectator-fonts.s3.amazonaws.com/Calluna-It-webfont.ttf") format("truetype");
   font-style: italic;
 }
 
 @font-face {
   font-family: Georgia;
-  src: url('https://spectator-fonts.s3.amazonaws.com/Georgia+Bold.ttf')
-    format('truetype');
+  src: url("https://spectator-fonts.s3.amazonaws.com/Calluna-Bold-webfont.ttf") format("truetype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: Graphik;
-  src: url('https://spectator-fonts.s3.amazonaws.com/Graphik-400-Regular.otf')
-    format('opentype');
+  src: url("https://spectator-fonts.s3.amazonaws.com/Graphik-400-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: Graphik;
-  src: url('https://spectator-fonts.s3.amazonaws.com/Graphik-600-Semibold.otf')
-    format('opentype');
+  src: url("https://spectator-fonts.s3.amazonaws.com/Graphik-600-Semibold.otf") format("opentype");
   font-weight: 600;
 }
 
@@ -55,7 +50,7 @@ body {
 h1,
 p {
   -webkit-font-smoothing: antialiased;
-  color: #121212;
+  color: #333;
 }
 
 a {
@@ -87,8 +82,8 @@ b {
 .paragraph {
   margin-bottom: 20px;
   font-family: $georgia;
-  font-size: 19px;
-  line-height: 1.63;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .subhed {
@@ -190,6 +185,7 @@ header {
 
   .pub-date {
     margin-bottom: 10px;
+    margin-top: -3px;
   }
 
   .inline-credits {
@@ -215,7 +211,7 @@ header {
     display: block;
     font-weight: 600;
     font-family: $graphik;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 26px;
   }
 
@@ -394,7 +390,7 @@ header {
       opacity: 1;
       box-shadow: 0 -10px white,
         // White shadow to mask top box-shadow
-          $navbar-shadow;
+        $navbar-shadow;
       flex: 1 0 auto;
     }
 
@@ -452,6 +448,11 @@ header {
 .width-full-width {
   max-width: 1300px;
   padding: 0 $gbody-padding * 1.5;
+
+  .image-caption-text {
+    padding: 0;
+    text-align: center;
+  }
 }
 
 .width-full-bleed {
@@ -465,7 +466,7 @@ header {
 }
 
 .width-auto {
-  max-width: 600px;
+  max-width: $gbody-width;
 }
 
 // full-width image --> full-bleed image
