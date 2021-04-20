@@ -17,6 +17,9 @@
     "sass": "^1.26.5"
   },
   "dependencies": {
+    "d3-scale-chromatic": "^2.0.0",
+    "d3-selection": "^2.0.0",
+    "d3-shape": "^2.1.0",
     "intersection-observer": "^0.10.0",
     "text-balancer": "^1.0.5"
   },

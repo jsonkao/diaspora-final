@@ -1,6 +1,11 @@
 <div class="footer g-body">
   <div class="article-credits">
     <each
+      loop="item in bibliography.split('\n')"
+    >
+      <p class="bib">{{{ item }}}</p>
+    </each>
+    <each
       loop="item in (typeof footer === 'undefined' ? [] : footer.split('\n'))"
     >
       <p>{{{ item }}}</p>

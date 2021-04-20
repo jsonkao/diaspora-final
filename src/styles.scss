@@ -3,6 +3,11 @@
 // Uncomment the following line before publishing a News story
 // @import "styles/news-ellipsis";
 
+cite {
+  font-style: normal;
+  font-family: $georgia;
+}
+
 .video-container {
   margin: 30px auto;
   max-width: 1200px;
@@ -162,4 +167,34 @@ div.image.mobile {
   max-width: 460px;
   width: calc(100% - 40px);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+div.mapping {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div.left, div.right {
+    flex: 0 0 150px;
+    text-align: center;
+  }
+  div.connector { margin: 0 20px; }
+
+  p {
+    margin: 0;
+    padding: 6px 3px;
+    font-size: 15px;
+    ///border: 1px solid #fff;
+    font-family: $graphik;
+
+    &:first-child {
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
 }
