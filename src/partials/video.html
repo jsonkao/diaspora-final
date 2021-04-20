@@ -1,8 +1,0 @@
-<div class="video-container {{ item.value.class }}">
-  <video controls class="video" preload="metadata">
-    <source src="assets/{{ item.value.asset }}" />
-  </video>
-  <if condition="'caption' in item.value">
-    <p class="paragraph caption">{{{ item.value.caption }}}</p>
-  </if>
-</div>
